@@ -22,8 +22,6 @@ RUN mkdir -p $APACHE_RUN_DIR $APACHE_LOCK_DIR $APACHE_LOG_DIR
 
 COPY http-svn.conf /var/svn/
 RUN cat /var/svn/http-svn.conf >> /etc/apache2/mods-enabled/dav_svn.conf
-COPY run-apache.sh /var/svn/
-
 
 EXPOSE 80 443 3960
 
